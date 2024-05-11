@@ -98,9 +98,9 @@ public class Iphone {
                                 System.out.println("1 - Exibir Pagina\n2 - Adicionar Nova Aba\n3 - Atualizar Pagina \n0 - Voltar");
 
                                 if (terminal.hasNextInt()) {
-                                    int opcaoTelefonico = terminal.nextInt();
+                                    int opcaoNavegador = terminal.nextInt();
 
-                                    switch (opcaoTelefonico) {
+                                    switch (opcaoNavegador) {
                                         case 1:
                                             nv.exibirPagina();
                                             break;
@@ -111,7 +111,7 @@ public class Iphone {
                                             nv.atualizarPagina();
                                             break;
                                         case 0:
-                                            telefoneAtivo = false;
+                                            navegadorAtivo = false;
                                             break;
                                         default:
                                             System.out.println("Opção inválida.");
