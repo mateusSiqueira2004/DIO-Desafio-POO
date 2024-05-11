@@ -4,6 +4,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ReprodutorMusical {
+    //@author: Mateus
+    //Talvez eu tenha feito mais e melhor do que foi pedido, mas foi divertido :)
+    //Minha playlist é boa demais >;)
     private boolean tocando = false;
     private String[] selecionaMusica = {
         "Golden Hour - JVKE", 
@@ -50,7 +53,7 @@ public class ReprodutorMusical {
 
     private String selecionaMusicaAleatoria() {
         Random random = new Random();
-        int idMusica = random.nextInt(selecionaMusica.length); // Gera um índice aleatório válido
+        int idMusica = random.nextInt(selecionaMusica.length);
         return selecionaMusica[idMusica];
     }
 }
