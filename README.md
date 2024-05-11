@@ -1,2 +1,2 @@
 # DIO-Desafio-POO
-Desafio de desenvolvimento de um Diagramação de Classes do Iphone
+Desafio de desenvolvimento com POO (Programação Orientada a Objeto)
