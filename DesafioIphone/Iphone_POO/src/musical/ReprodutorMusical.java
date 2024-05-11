@@ -7,7 +7,8 @@ public class ReprodutorMusical {
     //@author: Mateus
     //Talvez eu tenha feito mais e melhor do que foi pedido, mas foi divertido :)
     //Minha playlist é boa demais >;)
-    private boolean tocando = false;
+  
+
     private String[] selecionaMusica = {
         "Golden Hour - JVKE", 
         "Triple Baka - HatsuneMiku", 
@@ -20,21 +21,12 @@ public class ReprodutorMusical {
         "Oblivion - HatsuneMiku"
     };
     public void tocar() {
-        if (!tocando) {
-            tocando = true;
-            System.out.println("Tocando música: " + selecionaMusicaAleatoria());
-        } else {
-            System.out.println("A música já está tocando.");
-        }
+        System.out.println("Tocando música: " + selecionaMusicaAleatoria());
+
     }
 
     public void pausar() {
-        if (tocando) {
-            tocando = false;
-            System.out.println("Pausando a música.");
-        } else {
-            System.out.println("Não há música tocando para pausar.");
-        }
+        System.out.println("Pausando a música.");
     }
     public void selecionarMusica() {
         Scanner scanner = new Scanner(System.in);
@@ -46,6 +38,7 @@ public class ReprodutorMusical {
         int idMusicaSelecionada = scanner.nextInt();
         if (idMusicaSelecionada >= 1 && idMusicaSelecionada <= selecionaMusica.length) {
             System.out.println("Reproduzindo: " + selecionaMusica[idMusicaSelecionada - 1]);
+
         } else {
             System.out.println("ID de música inválido.");
         }

@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import musical.ReprodutorMusical;
+import navegador.Navegador;
 import telefone.Telefone;
 
 public class Iphone {
@@ -22,6 +23,7 @@ public class Iphone {
                         case 1:
                             while (reprodutorAtivo) {
                                 ReprodutorMusical rm = new ReprodutorMusical();
+                                
                                 System.out.println("1 - Selecionar Música \n2 - Tocar Aleatório\n3 - Pausar\n0 - Voltar");
 
                                 if (terminal.hasNextInt()) {
@@ -30,13 +32,16 @@ public class Iphone {
                                     switch (opcaoMusica) {
                                         case 1:
                                             rm.selecionarMusica();
-                                            
+                                           
                                             break;
                                         case 2:
                                             rm.tocar();
+                                           
                                             break;
                                         case 3:
+                                            
                                             rm.pausar();
+                                           
                                             break;
                                         case 0:
                                             reprodutorAtivo = false;
@@ -88,8 +93,36 @@ public class Iphone {
                             break;
 
                         case 3:
+                            while(navegadorAtivo){
+                                Navegador nv = new Navegador();
+                                System.out.println("1 - Exibir Pagina\n2 - Adicionar Nova Aba\n3 - Atualizar Pagina \n0 - Voltar");
+
+                                if (terminal.hasNextInt()) {
+                                    int opcaoTelefonico = terminal.nextInt();
+
+                                    switch (opcaoTelefonico) {
+                                        case 1:
+                                            nv.exibirPagina();
+                                            break;
+                                        case 2:
+                                            nv.adicionarNovaAba();
+                                            break;
+                                        case 3:
+                                            nv.atualizarPagina();
+                                            break;
+                                        case 0:
+                                            telefoneAtivo = false;
+                                            break;
+                                        default:
+                                            System.out.println("Opção inválida.");
+                                            break;
+                                    }
+                                } else {
+                                    System.out.println("Opção inválida. Tente novamente.");
+                                    terminal.next(); 
+                                }
+                            }
                             
-                            System.out.println("Navegador não implementado ainda.");
                             break;
 
                         case 0:
